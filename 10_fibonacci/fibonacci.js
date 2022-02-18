@@ -10,7 +10,7 @@ const fibonacci = function (fibNum) {
       if (i === 0) {
         num = 0 + arr[0];
       } else {
-        num = num + arr[i - 1];
+        num += arr[i - 1];
       }
       i++;
       arr[i] = num;
