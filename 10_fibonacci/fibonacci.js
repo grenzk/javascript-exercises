@@ -1,19 +1,16 @@
 const fibonacci = function (fibNum) {
   const arr = [];
-  let num = 1;
-  arr[0] = num;
-  let i = 0;
+  let num1 = 1;
+  let num2 = 1;
+  let sum;
 
   parseInt(fibNum);
   if (fibNum > 0) {
-    while (i < fibNum - 1) {
-      if (i === 0) {
-        num = 0 + arr[0];
-      } else {
-        num += arr[i - 1];
-      }
-      i++;
-      arr[i] = num;
+    for (let i = 0; i < fibNum; i++) {
+      arr.push(num1);
+      sum = num1 + num2;
+      num1 = num2;
+      num2 = sum;
     }
     return arr[fibNum - 1];
   } else {
